@@ -1,13 +1,18 @@
-#Find the length of the Integer Array
-#Count variable assign
-#a =[2,4,6,8,10]
-#Input = a
-#Output = 5
+#Find the element weather, Present or Not
+#Using flag True/False
+#Search_element declare
+#a = [4,9,6,2,0]
+#Input = array
+#Output = 4 True 
 
-def length_of_Integer(a):
-    count = 0
-    while(a[count:]):
-        count+=1
-    return count
-a = [2,4,6,8,10]
-print(length_of_Integer(a))
+def Find_the_element(a,Search_element):
+    for i in a:
+        flag = False
+        if(i==Search_element):
+            flag = True
+            break
+    return flag
+
+a = [4,9,6,2,0]
+Search_element = input('Enter the search element :')
+print(Find_the_element(a,Search_element))
