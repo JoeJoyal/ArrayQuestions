@@ -1,8 +1,9 @@
-#Find the index value from array
-#a=[4,8,3,6,0,2]
+#Found the more than onces values occurs
+#declare temp var assign
+#Using flag True/False
+#a = [14,5,5,9,21,21,13]
 #Input = a
-#Output = a = 2,index = 5
-#Index = 0
+#Output = 5,21 = True
 
 def count(a):
     count = 0
@@ -10,18 +11,20 @@ def count(a):
         count+=1
     return count
 
-def Find_the_index_value(a,search_index):
-    index = 0
-    length_of_the_index = count(a)
-    while(index!=length_of_the_index):
-        if(a[index] == search_index):
-            break
-        index+= 1
+def found_more_than_onces(a,search_element):
+    flag = False
+    i = 0
+    temp = count(a)
+    counti = 0
+    while(i!=temp):
+        if(a[i] == search_element):
+            counti+=1
+        i+=1
 
-        if(index == length_of_the_index):
-            index = -1
-    return index
+        if(counti == 2):
+            flag = True
+    return flag
 
-a = [4,8,3,6,0,2]
-search_index = input('Get the index value :')
-print(Find_the_index_value(a,search_index))
+a = [14,5,5,9,21,21,13]
+search_element = input("More than one values occurs :")
+print(found_more_than_onces(a,search_element))
