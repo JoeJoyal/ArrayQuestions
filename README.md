@@ -1,15 +1,13 @@
-# Questions on Unsorted Arrays
+#Find the length of the Integer Array
+#Count variable assign
+#a =[2,4,6,8,10]
+#Input = a
+#Output = 5
 
-### For Students of ROOT IT LEARNING CENTRE, TRICHY
-
-## Instructions: Fork the repository, add your solutions and give pull requests for evaluation
-
-For Details Contact: 
-
-P.ANANDKUMAR 
-
-Mobile: 9790636324 
-
-Email: root.anand@gmail.com  
-
-www.therootlearning.com  
+def length_of_Integer(a):
+    count = 0
+    while(a[count:]):
+        count+=1
+    return count
+a = [2,4,6,8,10]
+print(length_of_Integer(a))
