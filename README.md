@@ -1,9 +1,8 @@
-#Found the more than onces values occurs
-#declare temp var assign
-#Using flag True/False
-#a = [14,5,5,9,21,21,13]
+#Find the No.of counts in the array
+#temp var assign
+#a= [14,8,5,8,9,3,7,3,3]
 #Input = a
-#Output = 5,21 = True
+#Output = 8 return count two 2 times
 
 def count(a):
     count = 0
@@ -11,20 +10,16 @@ def count(a):
         count+=1
     return count
 
-def found_more_than_onces(a,search_element):
-    flag = False
+def Count_the_No_of_times(a,search_elements):
     i = 0
     temp = count(a)
     counti = 0
     while(i!=temp):
-        if(a[i] == search_element):
+        if(a[i] == search_elements):
             counti+=1
         i+=1
+    return counti
 
-        if(counti == 2):
-            flag = True
-    return flag
-
-a = [14,5,5,9,21,21,13]
-search_element = input("More than one values occurs :")
-print(found_more_than_onces(a,search_element))
+a = [14,8,5,8,9,3,7,3,3]
+search_elements = input("No.of times count occurs :")
+print(Count_the_No_of_times(a,search_elements))
